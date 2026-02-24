@@ -71,6 +71,13 @@
         .animate-blink-gold {
             animation: blink-gold 1.2s ease-in-out infinite;
         }
+        @keyframes blink-red {
+            0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.5); }
+            50% { opacity: 0.9; box-shadow: 0 0 20px 4px rgba(255, 0, 0, 0.4); }
+        }
+        .animate-blink-red {
+            animation: blink-red 1.2s ease-in-out infinite;
+        }
 
         /* Safe area para botão flutuante (notch / home indicator) */
         .whatsapp-float {
@@ -202,8 +209,11 @@
                         </a>
                     </div>
                     <div class="flex justify-center sm:block">
-                        <button type="button" id="btnPlayVideo" class="flex items-center justify-center gap-2 bg-brand-gold text-brand-dark hover:brightness-110 border-2 border-brand-gold rounded-full w-14 h-14 md:w-16 md:h-16 shrink-0 transition-all animate-blink-gold" aria-label="Assistir vídeo">
-                            <i class="ph-fill ph-play text-2xl md:text-3xl ml-0.5"></i>
+                        <button type="button" id="btnPlayVideo" class="flex items-center gap-3 bg-[#FF0000] text-white hover:brightness-110 border-2 border-[#FF0000] rounded-full pl-4 pr-5 py-3 md:pl-5 md:pr-6 md:py-3.5 shrink-0 transition-all animate-blink-red group/btn" aria-label="Assistir vídeo">
+                            <span class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-black/20 shrink-0">
+                                <i class="ph-fill ph-play text-xl md:text-2xl ml-0.5"></i>
+                            </span>
+                            <span class="text-white font-medium text-sm md:text-base whitespace-nowrap">Dr. Farid tem uma mensagem pra vc</span>
                         </button>
                     </div>
                 </div>
@@ -437,87 +447,92 @@
                 </h2>
                 <div class="w-16 h-1 bg-brand-gold mx-auto mt-6 rounded-full"></div>
             </div>
-
+    
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 h-auto lg:h-[480px]">
-
-                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-auto min-h-[260px] lg:h-full entrance-fade-in-up entrance-delay-2">
-                    <img src="img/mosaico/farid-26.jpg.jpeg" alt="Ética e Cuidado" class="relative w-full h-auto object-contain object-center lg:absolute lg:inset-0 lg:w-full lg:h-full lg:object-cover md:transition-transform md:duration-700 md:group-hover:scale-110 block">
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/50 to-transparent opacity-80 md:group-hover:opacity-95 md:transition-opacity md:duration-500"></div>
-                    <div class="absolute inset-0 p-6 flex flex-col justify-end">
-                        <div class="translate-y-4 md:group-hover:translate-y-0 md:transition-transform md:duration-500 mb-3">
-                            <p class="text-brand-textLight text-sm font-light leading-relaxed opacity-90 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-500 delay-100">
+    
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-[350px] lg:h-full entrance-fade-in-up entrance-delay-2">
+                    <img src="img/mosaico/farid-26.jpg.jpeg" alt="Ética e Cuidado" class="absolute inset-0 w-full h-full object-cover md:transition-transform md:duration-700 md:group-hover:scale-110">
+                    <div class="absolute inset-0 bg-brand-dark/60 md:bg-gradient-to-t md:from-brand-dark md:via-brand-dark/50 md:to-transparent md:opacity-80 md:group-hover:opacity-95 md:transition-opacity"></div>
+                    
+                    <div class="absolute inset-0 p-8 flex flex-col justify-center items-center text-center md:justify-end md:items-start md:text-left">
+                        <div class="md:translate-y-4 md:group-hover:translate-y-0 md:transition-transform md:duration-500 mb-4">
+                            <p class="text-brand-textLight text-lg md:text-sm font-light leading-relaxed md:opacity-0 md:group-hover:opacity-100 transition-all">
                                 A ética e o cuidado andam lado a lado no meu consultório. Aqui, a sua segurança é a base de tudo. 💙
                             </p>
                         </div>
-                        <h3 class="text-brand-gold font-serif text-2xl flex items-center gap-2 flex-shrink-0">
-                            <i class="ph-fill ph-heart text-xl"></i> Ética
+                        <h3 class="text-brand-gold font-serif text-3xl md:text-2xl flex items-center gap-2">
+                            <i class="ph-fill ph-heart"></i> Ética
                         </h3>
                     </div>
                 </div>
-
-                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-auto min-h-[260px] lg:h-full entrance-fade-in-up entrance-delay-3">
-                    <img src="img/mosaico/farid-28.jpg.jpeg" alt="Transparência" class="relative w-full h-auto object-contain object-center lg:absolute lg:inset-0 lg:w-full lg:h-full lg:object-cover md:transition-transform md:duration-700 md:group-hover:scale-110 block">
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/50 to-transparent opacity-80 md:group-hover:opacity-95 md:transition-opacity md:duration-500"></div>
-                    <div class="absolute inset-0 p-6 flex flex-col justify-end">
-                        <div class="translate-y-4 md:group-hover:translate-y-0 md:transition-transform md:duration-500 mb-3">
-                            <p class="text-brand-textLight text-sm font-light leading-relaxed opacity-90 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-500 delay-100">
-                                Entendo que cada paciente chega com um sonho e uma expectativa. Minha missão é unir esse desejo ao que é seguro. Nossa conversa será sempre transparente.
+    
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-[350px] lg:h-full entrance-fade-in-up entrance-delay-3">
+                    <img src="img/mosaico/farid-28.jpg.jpeg" alt="Transparência" class="absolute inset-0 w-full h-full object-cover md:transition-transform md:duration-700 md:group-hover:scale-110">
+                    <div class="absolute inset-0 bg-brand-dark/60 md:bg-gradient-to-t md:from-brand-dark md:via-brand-dark/50 md:to-transparent md:opacity-80 md:group-hover:opacity-95 md:transition-opacity"></div>
+                    
+                    <div class="absolute inset-0 p-8 flex flex-col justify-center items-center text-center md:justify-end md:items-start md:text-left">
+                        <div class="md:translate-y-4 md:group-hover:translate-y-0 md:transition-transform md:duration-500 mb-4">
+                            <p class="text-brand-textLight text-lg md:text-sm font-light leading-relaxed md:opacity-0 md:group-hover:opacity-100 transition-all">
+                                Minha missão é unir seu desejo ao que é seguro. Nossa conversa será sempre transparente.
                             </p>
                         </div>
-                        <h3 class="text-brand-gold font-serif text-2xl flex items-center gap-2 flex-shrink-0">
-                            <i class="ph-fill ph-chat-circle-text text-xl"></i> Transparência
+                        <h3 class="text-brand-gold font-serif text-3xl md:text-2xl flex items-center gap-2">
+                            <i class="ph-fill ph-chat-circle-text"></i> Transparência
                         </h3>
                     </div>
                 </div>
-
-                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-auto min-h-[260px] lg:h-full entrance-fade-in-up entrance-delay-4">
-                    <img src="img/mosaico/farid-43.jpg.jpeg" alt="Segurança" class="relative w-full h-auto object-contain object-center lg:absolute lg:inset-0 lg:w-full lg:h-full lg:object-cover md:transition-transform md:duration-700 md:group-hover:scale-110 block">
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/50 to-transparent opacity-80 md:group-hover:opacity-95 md:transition-opacity md:duration-500"></div>
-                    <div class="absolute inset-0 p-6 flex flex-col justify-end">
-                        <div class="translate-y-4 md:group-hover:translate-y-0 md:transition-transform md:duration-500 mb-3">
-                            <p class="text-brand-textLight text-sm font-light leading-relaxed opacity-90 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-500 delay-100">
-                                Seja para a prótese ideal ou o preparo corporal, meu compromisso é com um resultado harmonioso, duradouro e, acima de tudo, seguro.
+    
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-[350px] lg:h-full entrance-fade-in-up entrance-delay-4">
+                    <img src="img/mosaico/farid-43.jpg.jpeg" alt="Segurança" class="absolute inset-0 w-full h-full object-cover md:transition-transform md:duration-700 md:group-hover:scale-110">
+                    <div class="absolute inset-0 bg-brand-dark/60 md:bg-gradient-to-t md:from-brand-dark md:via-brand-dark/50 md:to-transparent md:opacity-80 md:group-hover:opacity-95 md:transition-opacity"></div>
+                    
+                    <div class="absolute inset-0 p-8 flex flex-col justify-center items-center text-center md:justify-end md:items-start md:text-left">
+                        <div class="md:translate-y-4 md:group-hover:translate-y-0 md:transition-transform md:duration-500 mb-4">
+                            <p class="text-brand-textLight text-lg md:text-sm font-light leading-relaxed md:opacity-0 md:group-hover:opacity-100 transition-all">
+                                Meu compromisso é com um resultado harmonioso, duradouro e, acima de tudo, seguro.
                             </p>
                         </div>
-                        <h3 class="text-brand-gold font-serif text-2xl flex items-center gap-2 flex-shrink-0">
-                            <i class="ph-fill ph-shield-check text-xl"></i> Segurança
+                        <h3 class="text-brand-gold font-serif text-3xl md:text-2xl flex items-center gap-2">
+                            <i class="ph-fill ph-shield-check"></i> Segurança
                         </h3>
                     </div>
                 </div>
-
-                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-auto min-h-[260px] lg:h-full entrance-fade-in-up entrance-delay-5">
-                    <img src="img/mosaico/farid-44.jpg.jpeg" alt="Tranquilidade" class="relative w-full h-auto object-contain object-center lg:absolute lg:inset-0 lg:w-full lg:h-full lg:object-cover md:transition-transform md:duration-700 md:group-hover:scale-110 block">
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/50 to-transparent opacity-80 md:group-hover:opacity-95 md:transition-opacity md:duration-500"></div>
-                    <div class="absolute inset-0 p-6 flex flex-col justify-end">
-                        <div class="translate-y-4 md:group-hover:translate-y-0 md:transition-transform md:duration-500 mb-3">
-                            <p class="text-brand-textLight text-sm font-light leading-relaxed opacity-90 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-500 delay-100">
-                                Acredite: cuidar de cada detalhe é o que garante sua tranquilidade e uma recuperação confiante. Sua saúde sempre em primeiro lugar.
+    
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-[350px] lg:h-full entrance-fade-in-up entrance-delay-5">
+                    <img src="img/mosaico/farid-44.jpg.jpeg" alt="Tranquilidade" class="absolute inset-0 w-full h-full object-cover md:transition-transform md:duration-700 md:group-hover:scale-110">
+                    <div class="absolute inset-0 bg-brand-dark/60 md:bg-gradient-to-t md:from-brand-dark md:via-brand-dark/50 md:to-transparent md:opacity-80 md:group-hover:opacity-95 md:transition-opacity"></div>
+                    
+                    <div class="absolute inset-0 p-8 flex flex-col justify-center items-center text-center md:justify-end md:items-start md:text-left">
+                        <div class="md:translate-y-4 md:group-hover:translate-y-0 md:transition-transform md:duration-500 mb-4">
+                            <p class="text-brand-textLight text-lg md:text-sm font-light leading-relaxed md:opacity-0 md:group-hover:opacity-100 transition-all">
+                                Cuidar de cada detalhe é o que garante sua tranquilidade. Sua saúde sempre em primeiro lugar.
                             </p>
                         </div>
-                        <h3 class="text-brand-gold font-serif text-2xl flex items-center gap-2 flex-shrink-0">
-                            <i class="ph-fill ph-leaf text-xl"></i> Tranquilidade
+                        <h3 class="text-brand-gold font-serif text-3xl md:text-2xl flex items-center gap-2">
+                            <i class="ph-fill ph-leaf"></i> Tranquilidade
                         </h3>
                     </div>
                 </div>
-
-                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-auto min-h-[260px] lg:h-full entrance-fade-in-up entrance-delay-6 sm:col-span-2 lg:col-span-1">
-                    <img src="img/mosaico/farid-55.jpg.jpeg" alt="Planejamento" class="relative w-full h-auto object-contain object-center lg:absolute lg:inset-0 lg:w-full lg:h-full lg:object-cover md:transition-transform md:duration-700 md:group-hover:scale-110 block">
-                    <div class="absolute inset-0 bg-gradient-to-t from-brand-gold/90 via-brand-dark/70 to-transparent opacity-90 md:group-hover:opacity-100 md:transition-opacity md:duration-500"></div>
-                    <div class="absolute inset-0 p-6 flex flex-col justify-end">
-                        <div class="translate-y-4 md:group-hover:translate-y-0 md:transition-transform md:duration-500 mb-3">
-                            <p class="text-white/95 text-sm font-medium leading-relaxed opacity-95 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-500 delay-100 mb-2">
-                                👉 Tem um projeto em mente? Vamos juntos planejar o seu procedimento com toda a segurança e clareza que você merece.
+    
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer h-[400px] lg:h-full entrance-fade-in-up entrance-delay-6 sm:col-span-2 lg:col-span-1">
+                    <img src="img/mosaico/farid-55.jpg.jpeg" alt="Planejamento" class="absolute inset-0 w-full h-full object-cover md:transition-transform md:duration-700 md:group-hover:scale-110">
+                    <div class="absolute inset-0 bg-brand-gold/80 md:bg-gradient-to-t md:from-brand-gold/90 md:via-brand-dark/70 md:to-transparent opacity-90"></div>
+                    
+                    <div class="absolute inset-0 p-8 flex flex-col justify-center items-center text-center md:justify-end md:items-start md:text-left">
+                        <div class="md:translate-y-4 md:group-hover:translate-y-0 md:transition-transform md:duration-500 mb-4">
+                            <p class="text-white text-lg md:text-sm font-medium leading-relaxed mb-4">
+                                👉 Vamos juntos planejar o seu procedimento com toda a segurança que você merece.
                             </p>
-                            <a href="https://wa.me/5541992710059" target="_blank" class="inline-flex items-center justify-center gap-2 bg-brand-dark text-brand-gold py-3 px-4 rounded text-xs font-bold uppercase tracking-widest hover:bg-white transition-colors opacity-100 md:opacity-0 md:group-hover:opacity-100 delay-150 shadow-xl">
-                                <i class="ph-fill ph-whatsapp-logo text-base"></i> Agendar Consulta
+                            <a href="https://wa.me/5541992710059" target="_blank" class="inline-flex items-center justify-center gap-2 bg-brand-dark text-brand-gold py-4 px-6 rounded-lg text-sm font-bold uppercase tracking-widest hover:bg-white transition-colors shadow-2xl">
+                                <i class="ph-fill ph-whatsapp-logo text-lg"></i> Agendar Agora
                             </a>
                         </div>
-                        <h3 class="text-white font-serif text-2xl flex items-center gap-2 drop-shadow-md flex-shrink-0">
-                            <i class="ph-fill ph-calendar-plus text-xl text-white"></i> Planejamento
+                        <h3 class="text-white font-serif text-3xl md:text-2xl flex items-center gap-2 drop-shadow-md mt-4 md:mt-0">
+                            <i class="ph-fill ph-calendar-plus"></i> Planejamento
                         </h3>
                     </div>
                 </div>
-
+    
             </div>
         </div>
     </section>
