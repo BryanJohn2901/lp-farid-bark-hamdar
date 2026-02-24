@@ -78,6 +78,18 @@
             scrollbar-width: none;
         }
 
+        /* Animação Marquee Infinita para o Instagram */
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 45s linear infinite;
+        }
+        .group-marquee:hover .animate-marquee {
+            animation-play-state: paused;
+        }
+
         /* ===== Animações de entrada (apenas desktop, min-width: 768px) ===== */
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(32px); }
@@ -496,7 +508,7 @@
         </div>
     </section>
 
-    <section class="bg-brand-light py-16 md:py-24 relative overflow-hidden">
+    <section class="bg-brand-gold/15 py-16 md:py-24 relative overflow-hidden">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(#C0A063_0.5px,transparent_0.5px)] [background-size:24px_24px] opacity-[0.15]"></div>
 
         <div class="w-full relative z-10">
@@ -509,41 +521,41 @@
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-[1400px] mx-auto px-4 sm:px-6 mb-16 entrance-fade-in-up entrance-delay-2">
-                <div class="aspect-[9/16] rounded-2xl overflow-hidden shadow-lg border border-gray-200 bg-black">
+                <div class="aspect-[9/16] rounded-2xl overflow-hidden shadow-lg border border-brand-gold/20 bg-black">
                     <iframe class="w-full h-full" src="https://www.youtube.com/embed/Od2evMyp8gY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
-                <div class="aspect-[9/16] rounded-2xl overflow-hidden shadow-lg border border-gray-200 bg-black">
+                <div class="aspect-[9/16] rounded-2xl overflow-hidden shadow-lg border border-brand-gold/20 bg-black">
                     <iframe class="w-full h-full" src="https://www.youtube.com/embed/CTCvCj0UL1Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
-                <div class="aspect-[9/16] rounded-2xl overflow-hidden shadow-lg border border-gray-200 bg-black">
+                <div class="aspect-[9/16] rounded-2xl overflow-hidden shadow-lg border border-brand-gold/20 bg-black">
                     <iframe class="w-full h-full" src="https://www.youtube.com/embed/A8tlAzVlFf8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
-                <div class="aspect-[9/16] rounded-2xl overflow-hidden shadow-lg border border-gray-200 bg-black">
+                <div class="aspect-[9/16] rounded-2xl overflow-hidden shadow-lg border border-brand-gold/20 bg-black">
                     <iframe class="w-full h-full" src="https://www.youtube.com/embed/l7UByrxtPgE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
 
             <div class="relative max-w-[1400px] mx-auto group">
                 
-                <button id="prevBtn" class="absolute left-2 lg:left-8 top-1/2 -translate-y-1/2 z-20 bg-white/90 shadow-[0_4px_20px_rgba(0,0,0,0.1)] rounded-full p-3 text-brand-gold hover:text-brand-dark hover:scale-110 transition-all duration-300 hidden md:flex items-center justify-center backdrop-blur-sm border border-brand-gold/20" aria-label="Depoimento Anterior">
+                <button id="prevBtn" class="absolute left-2 lg:left-8 top-1/2 -translate-y-1/2 z-20 bg-white/90 shadow-[0_4px_20px_rgba(0,0,0,0.1)] rounded-full p-3 text-brand-gold hover:text-brand-dark hover:scale-110 transition-all duration-300 hidden md:flex items-center justify-center backdrop-blur-sm border border-brand-gold/30" aria-label="Depoimento Anterior">
                     <i class="ph-bold ph-caret-left text-2xl"></i>
                 </button>
 
-                <button id="nextBtn" class="absolute right-2 lg:right-8 top-1/2 -translate-y-1/2 z-20 bg-white/90 shadow-[0_4px_20px_rgba(0,0,0,0.1)] rounded-full p-3 text-brand-gold hover:text-brand-dark hover:scale-110 transition-all duration-300 hidden md:flex items-center justify-center backdrop-blur-sm border border-brand-gold/20" aria-label="Próximo Depoimento">
+                <button id="nextBtn" class="absolute right-2 lg:right-8 top-1/2 -translate-y-1/2 z-20 bg-white/90 shadow-[0_4px_20px_rgba(0,0,0,0.1)] rounded-full p-3 text-brand-gold hover:text-brand-dark hover:scale-110 transition-all duration-300 hidden md:flex items-center justify-center backdrop-blur-sm border border-brand-gold/30" aria-label="Próximo Depoimento">
                     <i class="ph-bold ph-caret-right text-2xl"></i>
                 </button>
 
                 <div id="carouselContainer" class="flex overflow-x-auto snap-x snap-mandatory gap-3 sm:gap-4 md:gap-6 pb-8 pt-4 hide-scrollbar px-4 sm:px-6 md:px-24">
-                    <div class="depoimento-card snap-center shrink-0 w-[calc(100vw-2rem)] sm:w-[320px] md:w-[350px] aspect-[9/16] max-h-[500px] overflow-hidden relative flex items-center justify-center cursor-pointer">
+                    <div class="depoimento-card snap-center shrink-0 w-[calc(100vw-2rem)] sm:w-[320px] md:w-[350px] aspect-[9/16] max-h-[500px] overflow-hidden relative flex items-center justify-center cursor-pointer rounded-xl bg-white/50 border border-brand-gold/20 shadow-sm">
                         <img src="img/depoimentos/dep.png" alt="Depoimento de Paciente" class="w-full h-full object-contain">
                     </div>
-                    <div class="depoimento-card snap-center shrink-0 w-[calc(100vw-2rem)] sm:w-[320px] md:w-[350px] aspect-[9/16] max-h-[500px] overflow-hidden relative flex items-center justify-center cursor-pointer">
+                    <div class="depoimento-card snap-center shrink-0 w-[calc(100vw-2rem)] sm:w-[320px] md:w-[350px] aspect-[9/16] max-h-[500px] overflow-hidden relative flex items-center justify-center cursor-pointer rounded-xl bg-white/50 border border-brand-gold/20 shadow-sm">
                         <img src="img/depoimentos/dep2.png" alt="Depoimento de Paciente" class="w-full h-full object-contain">
                     </div>
-                    <div class="depoimento-card snap-center shrink-0 w-[calc(100vw-2rem)] sm:w-[320px] md:w-[350px] aspect-[9/16] max-h-[500px] overflow-hidden relative flex items-center justify-center cursor-pointer">
+                    <div class="depoimento-card snap-center shrink-0 w-[calc(100vw-2rem)] sm:w-[320px] md:w-[350px] aspect-[9/16] max-h-[500px] overflow-hidden relative flex items-center justify-center cursor-pointer rounded-xl bg-white/50 border border-brand-gold/20 shadow-sm">
                         <img src="img/depoimentos/dep3.png" alt="Depoimento de Paciente" class="w-full h-full object-contain">
                     </div>
-                    <div class="depoimento-card snap-center shrink-0 w-[calc(100vw-2rem)] sm:w-[320px] md:w-[350px] aspect-[9/16] max-h-[500px] overflow-hidden relative flex items-center justify-center cursor-pointer">
+                    <div class="depoimento-card snap-center shrink-0 w-[calc(100vw-2rem)] sm:w-[320px] md:w-[350px] aspect-[9/16] max-h-[500px] overflow-hidden relative flex items-center justify-center cursor-pointer rounded-xl bg-white/50 border border-brand-gold/20 shadow-sm">
                         <img src="img/depoimentos/dep4.png" alt="Depoimento de Paciente" class="w-full h-full object-contain">
                     </div>
                 </div>
@@ -698,6 +710,101 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-brand-light py-16 md:py-24 border-t border-brand-gold/10 overflow-hidden relative">
+        <div class="w-full max-w-[1300px] mx-auto px-4 sm:px-6 relative z-10">
+            <div class="text-center mb-12 md:mb-16 entrance-fade-in-up">
+                <a href="https://www.instagram.com/dr.faridbarkhamdar/" target="_blank" rel="noopener noreferrer" class="text-brand-gold text-sm font-bold uppercase tracking-[0.3em] mb-4 block hover:opacity-80 transition-opacity">
+                    @dr.faridbarkhamdar
+                </a>
+                <h2 class="text-3xl md:text-5xl font-bold text-brand-dark font-serif">
+                    Um pouco do que você encontra no <span class="text-brand-gold italic font-light">nosso Instagram</span>
+                </h2>
+                <div class="w-16 h-1 bg-brand-gold mx-auto mt-6 rounded-full"></div>
+            </div>
+        </div>
+
+        <div class="relative w-full overflow-hidden group-marquee py-4">
+            
+            <div class="absolute top-0 left-0 w-8 md:w-32 h-full bg-gradient-to-r from-brand-light to-transparent z-20 pointer-events-none"></div>
+            <div class="absolute top-0 right-0 w-8 md:w-32 h-full bg-gradient-to-l from-brand-light to-transparent z-20 pointer-events-none"></div>
+
+            <div class="flex w-max animate-marquee gap-4 md:gap-6 px-2 md:px-3">
+                <div class="w-64 md:w-80 shrink-0 aspect-[4/5] overflow-hidden relative flex items-center justify-center">
+                    <img src="img/depoimentos/depoimentos-txt/WhatsApp%20Image%202026-02-13%20at%2010.16.47.jpeg" alt="Depoimento" class="w-full h-full object-contain">
+                </div>
+                <div class="w-64 md:w-80 shrink-0 aspect-[4/5] overflow-hidden relative flex items-center justify-center">
+                    <img src="img/depoimentos/depoimentos-txt/WhatsApp%20Image%202026-02-13%20at%2010.11.21.jpeg" alt="Depoimento" class="w-full h-full object-contain">
+                </div>
+                <div class="w-64 md:w-80 shrink-0 aspect-[4/5] overflow-hidden relative flex items-center justify-center">
+                    <img src="img/depoimentos/depoimentos-txt/WhatsApp%20Image%202026-02-13%20at%2010.07.41.jpeg" alt="Depoimento" class="w-full h-full object-contain">
+                </div>
+                <div class="w-64 md:w-80 shrink-0 aspect-[4/5] overflow-hidden relative flex items-center justify-center">
+                    <img src="img/depoimentos/depoimentos-txt/WhatsApp%20Image%202026-02-13%20at%2010.07.56.jpeg" alt="Depoimento" class="w-full h-full object-contain">
+                </div>
+                <div class="w-64 md:w-80 shrink-0 aspect-[4/5] overflow-hidden relative flex items-center justify-center">
+                    <img src="img/depoimentos/depoimentos-txt/WhatsApp%20Image%202026-02-13%20at%2010.07.29.jpeg" alt="Depoimento" class="w-full h-full object-contain">
+                </div>
+                <div class="w-64 md:w-80 shrink-0 aspect-[4/5] overflow-hidden relative flex items-center justify-center">
+                    <img src="img/depoimentos/depoimentos-txt/WhatsApp%20Image%202026-02-13%20at%2010.43.45.jpeg" alt="Depoimento" class="w-full h-full object-contain">
+                </div>
+                <div class="w-64 md:w-80 shrink-0 aspect-[4/5] overflow-hidden relative flex items-center justify-center">
+                    <img src="img/depoimentos/depoimentos-txt/WhatsApp%20Image%202026-02-13%20at%2010.39.06.jpeg" alt="Depoimento" class="w-full h-full object-contain">
+                </div>
+                <div class="w-64 md:w-80 shrink-0 aspect-[4/5] overflow-hidden relative flex items-center justify-center">
+                    <img src="img/depoimentos/depoimentos-txt/WhatsApp%20Image%202026-02-13%20at%2010.08.16.jpeg" alt="Depoimento" class="w-full h-full object-contain">
+                </div>
+                <div class="w-64 md:w-80 shrink-0 aspect-[4/5] overflow-hidden relative flex items-center justify-center">
+                    <img src="img/depoimentos/depoimentos-txt/WhatsApp%20Image%202026-02-11%20at%2014.12.20.jpeg" alt="Depoimento" class="w-full h-full object-contain">
+                </div>
+                <div class="w-64 md:w-80 shrink-0 aspect-[4/5] overflow-hidden relative flex items-center justify-center">
+                    <img src="img/depoimentos/depoimentos-txt/WhatsApp%20Image%202026-02-13%20at%2010.36.32.jpeg" alt="Depoimento" class="w-full h-full object-contain">
+                </div>
+                <div class="w-64 md:w-80 shrink-0 aspect-[4/5] overflow-hidden relative flex items-center justify-center">
+                    <img src="img/depoimentos/depoimentos-txt/WhatsApp%20Image%202026-02-13%20at%2010.15.13.jpeg" alt="Depoimento" class="w-full h-full object-contain">
+                </div>
+                <div class="w-64 md:w-80 shrink-0 aspect-[4/5] overflow-hidden relative flex items-center justify-center">
+                    <img src="img/depoimentos/depoimentos-txt/WhatsApp%20Image%202026-02-13%20at%2010.39.38.jpeg" alt="Depoimento" class="w-full h-full object-contain">
+                </div>
+                <div class="w-64 md:w-80 shrink-0 aspect-[4/5] overflow-hidden relative flex items-center justify-center">
+                    <img src="img/depoimentos/depoimentos-txt/WhatsApp%20Image%202026-02-13%20at%2010.16.47.jpeg" alt="Depoimento" class="w-full h-full object-contain">
+                </div>
+                <div class="w-64 md:w-80 shrink-0 aspect-[4/5] overflow-hidden relative flex items-center justify-center">
+                    <img src="img/depoimentos/depoimentos-txt/WhatsApp%20Image%202026-02-13%20at%2010.11.21.jpeg" alt="Depoimento" class="w-full h-full object-contain">
+                </div>
+                <div class="w-64 md:w-80 shrink-0 aspect-[4/5] overflow-hidden relative flex items-center justify-center">
+                    <img src="img/depoimentos/depoimentos-txt/WhatsApp%20Image%202026-02-13%20at%2010.07.41.jpeg" alt="Depoimento" class="w-full h-full object-contain">
+                </div>
+                <div class="w-64 md:w-80 shrink-0 aspect-[4/5] overflow-hidden relative flex items-center justify-center">
+                    <img src="img/depoimentos/depoimentos-txt/WhatsApp%20Image%202026-02-13%20at%2010.07.56.jpeg" alt="Depoimento" class="w-full h-full object-contain">
+                </div>
+                <div class="w-64 md:w-80 shrink-0 aspect-[4/5] overflow-hidden relative flex items-center justify-center">
+                    <img src="img/depoimentos/depoimentos-txt/WhatsApp%20Image%202026-02-13%20at%2010.07.29.jpeg" alt="Depoimento" class="w-full h-full object-contain">
+                </div>
+                <div class="w-64 md:w-80 shrink-0 aspect-[4/5] overflow-hidden relative flex items-center justify-center">
+                    <img src="img/depoimentos/depoimentos-txt/WhatsApp%20Image%202026-02-13%20at%2010.43.45.jpeg" alt="Depoimento" class="w-full h-full object-contain">
+                </div>
+                <div class="w-64 md:w-80 shrink-0 aspect-[4/5] overflow-hidden relative flex items-center justify-center">
+                    <img src="img/depoimentos/depoimentos-txt/WhatsApp%20Image%202026-02-13%20at%2010.39.06.jpeg" alt="Depoimento" class="w-full h-full object-contain">
+                </div>
+                <div class="w-64 md:w-80 shrink-0 aspect-[4/5] overflow-hidden relative flex items-center justify-center">
+                    <img src="img/depoimentos/depoimentos-txt/WhatsApp%20Image%202026-02-13%20at%2010.08.16.jpeg" alt="Depoimento" class="w-full h-full object-contain">
+                </div>
+                <div class="w-64 md:w-80 shrink-0 aspect-[4/5] overflow-hidden relative flex items-center justify-center">
+                    <img src="img/depoimentos/depoimentos-txt/WhatsApp%20Image%202026-02-11%20at%2014.12.20.jpeg" alt="Depoimento" class="w-full h-full object-contain">
+                </div>
+                <div class="w-64 md:w-80 shrink-0 aspect-[4/5] overflow-hidden relative flex items-center justify-center">
+                    <img src="img/depoimentos/depoimentos-txt/WhatsApp%20Image%202026-02-13%20at%2010.36.32.jpeg" alt="Depoimento" class="w-full h-full object-contain">
+                </div>
+                <div class="w-64 md:w-80 shrink-0 aspect-[4/5] overflow-hidden relative flex items-center justify-center">
+                    <img src="img/depoimentos/depoimentos-txt/WhatsApp%20Image%202026-02-13%20at%2010.15.13.jpeg" alt="Depoimento" class="w-full h-full object-contain">
+                </div>
+                <div class="w-64 md:w-80 shrink-0 aspect-[4/5] overflow-hidden relative flex items-center justify-center">
+                    <img src="img/depoimentos/depoimentos-txt/WhatsApp%20Image%202026-02-13%20at%2010.39.38.jpeg" alt="Depoimento" class="w-full h-full object-contain">
+                </div>
             </div>
         </div>
     </section>
