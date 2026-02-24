@@ -182,23 +182,23 @@
             <img src="img/funHero.jpg" alt="Background Clínica" class="w-full h-full object-cover opacity-30">
             <div class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/95 to-brand-dark/40 lg:to-transparent"></div>
         </div>
-
+    
         <div class="w-full max-w-[1300px] mx-auto px-4 sm:px-6 relative z-10 flex flex-col lg:flex-row items-stretch min-h-[90vh] lg:min-h-[700px]">
-
+    
             <div class="w-full lg:w-1/2 flex flex-col justify-center py-20 lg:py-10">
-
+    
                 <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-gold/40 bg-brand-dark/60 backdrop-blur-md text-brand-gold text-xs md:text-sm font-bold mb-6 w-max uppercase tracking-widest shadow-sm entrance-fade-in-left entrance-delay-2 mt-8">
                     <i class="ph-fill ph-star"></i> Excelência e Naturalidade
                 </div>
-
+    
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-md font-serif max-w-xl entrance-fade-in-left entrance-delay-3">
                     A ciência da naturalidade para resgatar a <span class="text-brand-gold italic font-light">sua melhor versão</span>.
                 </h1>
-
+    
                 <p class="text-lg md:text-xl text-brand-textLight/90 mb-10 leading-relaxed font-light max-w-xl entrance-fade-in-left entrance-delay-4">
                     Planejamento cirúrgico de vanguarda e acompanhamento multidisciplinar para mulheres que buscam segurança e resultados que respeitam a sua identidade.
                 </p>
-
+    
                 <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-6 entrance-fade-in-left entrance-delay-5">
                     <div class="relative group cursor-pointer inline-block w-full sm:w-auto">
                         <div class="absolute -inset-1 bg-brand-gold rounded opacity-40 md:group-hover:opacity-70 blur-md md:transition md:duration-500 animate-pulse z-0"></div>
@@ -208,16 +208,16 @@
                             <i class="ph-bold ph-arrow-right text-xl md:transition-transform md:duration-300 md:group-hover:translate-x-2"></i>
                         </a>
                     </div>
+    
                     <div class="flex justify-center sm:block">
-                        <button type="button" id="btnPlayVideo" class="flex items-center gap-3 bg-[#FF0000] text-white hover:brightness-110 border-2 border-[#FF0000] rounded-full pl-4 pr-5 py-3 md:pl-5 md:pr-6 md:py-3.5 shrink-0 transition-all animate-blink-red group/btn" aria-label="Assistir vídeo">
-                            <span class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-black/20 shrink-0">
-                                <i class="ph-fill ph-play text-xl md:text-2xl ml-0.5"></i>
-                            </span>
-                            <span class="text-white font-medium text-sm md:text-base whitespace-nowrap">Dr. Farid tem uma mensagem pra vc</span>
+                        <button type="button" id="btnPlayVideo"
+                            class="flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-[#FF0000] text-white hover:brightness-110 border-2 border-[#FF0000] rounded-full shrink-0 transition-all animate-blink-red shadow-lg group/btn outline-none"
+                            aria-label="Assistir vídeo">
+                            <span class="inline-flex items-center justify-center w-full h-full"><i class="ph-fill ph-play text-2xl md:text-3xl block leading-[0] flex-shrink-0 -translate-x-0.5 -translate-y-px"></i></span>
                         </button>
                     </div>
                 </div>
-
+    
                 <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4 entrance-fade-in-up entrance-delay-6">
                     <div class="flex items-center gap-3 text-brand-textLight/80 text-sm border-l-2 border-brand-gold/30 pl-4 py-1">
                         <i class="ph-fill ph-shield-check text-2xl text-brand-gold"></i>
@@ -228,15 +228,15 @@
                         <span class="leading-tight font-light">CRM-PR 31890<br><strong class="font-bold text-white">RQE 27351</strong></span>
                     </div>
                 </div>
-
+    
             </div>
-
+    
             <div class="w-full lg:w-1/2 relative flex items-end justify-center lg:justify-end mt-10 lg:mt-0 entrance-fade-in-right entrance-delay-4">
                 <div class="absolute bottom-10 right-10 w-2/3 h-2/3 bg-brand-gold/10 rounded-full blur-3xl -z-10 hidden lg:block"></div>
                 <img src="img/drHero.png" alt="Dr. Farid Bark"
                     class="w-full max-w-[500px] lg:max-w-none h-auto lg:h-[100%] max-h-[85vh] lg:max-h-none object-contain object-bottom drop-shadow-2xl z-10">
             </div>
-
+    
         </div>
     </header>
 
@@ -252,9 +252,13 @@
                 <div class="w-24 h-1 bg-brand-gold mt-6 rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                
-                <div class="group relative p-10 rounded-2xl border border-white/5 bg-gradient-to-b from-white/5 to-transparent md:hover:border-brand-gold/30 md:transition-all md:duration-500 entrance-fade-in-up entrance-delay-2">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 lg:gap-8 items-stretch">
+                <!-- Vídeo à esquerda do primeiro card -->
+                <div class="relative w-full rounded-2xl overflow-hidden border border-white/5 bg-black/40 aspect-[9/16] max-h-[420px] md:max-h-none md:min-h-[320px] entrance-fade-in-up entrance-delay-2">
+                    <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/zYs14fShOS8?rel=0" title="Vídeo Dr. Farid Bark" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+
+                <div class="group relative p-8 lg:p-10 rounded-2xl border border-white/5 bg-gradient-to-b from-white/5 to-transparent md:hover:border-brand-gold/30 md:transition-all md:duration-500 entrance-fade-in-up entrance-delay-2">
                     <span class="absolute top-4 right-8 text-7xl font-bold text-white/[0.03] md:group-hover:text-brand-gold/10 md:transition-colors md:duration-500 font-serif">01</span>
 
                     <div class="relative z-10">
@@ -270,7 +274,7 @@
                     </div>
                 </div>
 
-                <div class="group relative p-10 rounded-2xl border border-white/5 bg-gradient-to-b from-white/5 to-transparent md:hover:border-brand-gold/30 md:transition-all md:duration-500 entrance-fade-in-up entrance-delay-3">
+                <div class="group relative p-8 lg:p-10 rounded-2xl border border-white/5 bg-gradient-to-b from-white/5 to-transparent md:hover:border-brand-gold/30 md:transition-all md:duration-500 entrance-fade-in-up entrance-delay-3">
                     <span class="absolute top-4 right-8 text-7xl font-bold text-white/[0.03] md:group-hover:text-brand-gold/10 md:transition-colors md:duration-500 font-serif">02</span>
 
                     <div class="relative z-10">
@@ -286,7 +290,7 @@
                     </div>
                 </div>
 
-                <div class="group relative p-10 rounded-2xl border border-white/5 bg-gradient-to-b from-white/5 to-transparent md:hover:border-brand-gold/30 md:transition-all md:duration-500 entrance-fade-in-up entrance-delay-4">
+                <div class="group relative p-8 lg:p-10 rounded-2xl border border-white/5 bg-gradient-to-b from-white/5 to-transparent md:hover:border-brand-gold/30 md:transition-all md:duration-500 entrance-fade-in-up entrance-delay-4">
                     <span class="absolute top-4 right-8 text-7xl font-bold text-white/[0.03] md:group-hover:text-brand-gold/10 md:transition-colors md:duration-500 font-serif">03</span>
 
                     <div class="relative z-10">
@@ -818,7 +822,7 @@
         </div>
     </footer>
 
-    <!-- Lightbox vídeo (abre ao carregar e pelo botão Play) -->
+    <!-- Lightbox vídeo (abre pelo botão Play na hero) -->
     <div id="videoLightbox" class="fixed inset-0 z-[200] bg-black/95 flex items-center justify-center p-4 hidden" role="dialog" aria-modal="true" aria-label="Assistir vídeo">
         <button type="button" id="videoLightboxClose" class="absolute top-4 right-4 z-10 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors" aria-label="Fechar">
             <i class="ph-bold ph-x text-2xl"></i>
@@ -855,9 +859,6 @@
                 videoLightboxIframe.src = '';
                 document.body.style.overflow = '';
             }
-
-            // Abre o vídeo em lightbox ao carregar a página (pequeno delay para a página pintar)
-            setTimeout(openVideoLightbox, 400);
 
             videoLightboxClose?.addEventListener('click', closeVideoLightbox);
             videoLightbox?.addEventListener('click', (e) => { if (e.target === videoLightbox) closeVideoLightbox(); });
